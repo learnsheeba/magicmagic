@@ -1,14 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import BrandMark from "../components/BrandMark.jsx";
+import magicBg from "../assets/landing-magic.png";
 
 export default function LandingPage() {
   const nav = useNavigate();
 
   return (
-    <div className="screen">
+    <div
+      className="screen"
+      style={{
+        backgroundImage: `url(${magicBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
       <div className="container">
-        <div className="card">
+        <div className="card" style={{ background: "rgba(255,255,255,0.92)", backdropFilter: "blur(6px)" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
             <BrandMark />
             <span className="pill">Magic Magic</span>

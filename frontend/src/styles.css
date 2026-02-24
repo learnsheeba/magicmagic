@@ -1,9 +1,9 @@
 :root{
-  --bg: #0b0c14;
-  --panel: rgba(255,255,255,.06);
-  --panel2: rgba(255,255,255,.09);
-  --text: rgba(255,255,255,.92);
-  --muted: rgba(255,255,255,.68);
+  --bg: #ffffff;
+  --panel: rgba(15,23,42,.02);
+  --panel2: rgba(15,23,42,.04);
+  --text: #111827;
+  --muted: #6b7280;
   --accent: #ffd36e;
   --good: #59d18f;
   --bad: #ff5d6c;
@@ -16,11 +16,7 @@ body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   color: var(--text);
-  background:
-    radial-gradient(900px 450px at 80% 0%, rgba(255, 211, 110, .20), transparent 60%),
-    radial-gradient(700px 400px at 20% 10%, rgba(102, 153, 255, .18), transparent 60%),
-    radial-gradient(800px 500px at 40% 100%, rgba(255, 93, 108, .10), transparent 60%),
-    var(--bg);
+  background: var(--bg);
 }
 
 a{ color: inherit; text-decoration: none; }
@@ -40,8 +36,8 @@ a{ color: inherit; text-decoration: none; }
 
 .card{
   width:min(460px, 100%);
-  background: linear-gradient(180deg, var(--panel), rgba(255,255,255,.03));
-  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(180deg, #ffffff, rgba(249,250,251,1));
+  border: 1px solid rgba(209,213,219,.9);
   border-radius: 24px;
   padding: 22px;
   box-shadow: 0 20px 60px rgba(0,0,0,.35);
@@ -68,14 +64,14 @@ a{ color: inherit; text-decoration: none; }
   gap: 10px;
   padding: 12px 14px;
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(209,213,219,.9);
+  background: #f9fafb;
   color: var(--text);
   font-weight: 650;
   cursor:pointer;
   transition: transform .08s ease, background .12s ease, border-color .12s ease;
 }
-.btn:hover{ background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.18); }
+.btn:hover{ background: #edf2ff; border-color: rgba(129,140,248,.7); }
 .btn:active{ transform: translateY(1px); }
 .btn:focus-visible{ outline: 3px solid var(--ring); outline-offset: 2px; }
 .btn.primary{
