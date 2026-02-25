@@ -40,7 +40,6 @@ export default function WorldMap({ points }) {
 
   const projection = useMemo(() => {
     if (!size.w || !size.h) return null;
-    // A pleasant, UI-oriented fit for a world overview.
     return geoMercator().scale(size.w / 6.1).translate([size.w / 2, size.h / 1.45]);
   }, [size.w, size.h]);
 
@@ -73,9 +72,9 @@ export default function WorldMap({ points }) {
               <path
                 key={f.id}
                 d={path(f)}
-                fill="rgba(255,255,255,.05)"
-                stroke="rgba(255,255,255,.10)"
-                strokeWidth="0.6"
+                fill="rgba(148, 163, 184, .12)"
+                stroke="rgba(148, 163, 184, .9)"
+                strokeWidth="0.35"
               />
             ))
           : null}
