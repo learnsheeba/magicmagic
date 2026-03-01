@@ -4,10 +4,15 @@ Mobile-first wishes map with React (frontend) + Node/Express (backend).
 
 ## Quick start
 
+From the project root (`magicmagic`):
+
 ```bash
+cd magicmagic
 npm install
-npm run dev
+npm run app
 ```
+
+Or use `npm run dev` for the same result.
 
 - Frontend: `http://localhost:5173`
 - Backend: `http://localhost:4000`
