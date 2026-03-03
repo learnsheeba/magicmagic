@@ -17,6 +17,34 @@ Or use `npm run dev` for the same result.
 - Frontend: `http://localhost:5173`
 - Backend: `http://localhost:4000`
 
+## Deploy to Vercel (frontend + backend)
+
+This repo deploys as a single Vercel project:
+
+- Vite React build is served from `frontend/dist`
+- Express backend runs as a Vercel Serverless Function (`api/index.js`)
+- Requests to `/api/*` and `/auth/*` are rewritten to the serverless backend (see `vercel.json`)
+
+### Vercel settings
+
+- **Framework preset**: Other
+- **Build command**: uses `vercel.json` (`npm run build -w frontend`)
+- **Output directory**: uses `vercel.json` (`frontend/dist`)
+
+### Vercel environment variables
+
+Set these in your Vercel Project Settings → Environment Variables:
+
+- `FRONTEND_ORIGIN`: `https://<your-vercel-domain>` (example: `https://magicmagic.vercel.app`)
+- `SESSION_SECRET`: a long random string
+- OAuth provider secrets (see below): Google/Facebook/Apple
+
+After deploy, your API should be reachable at:
+
+- `https://<your-vercel-domain>/api/me`
+
+(If you hit `.../frontend/api/me` you’ll get `Not Found` — the correct path is `/api/me`.)
+
 ## OAuth setup (Google / Facebook / Apple)
 
 Backend env vars live in `backend/.env` (copy from `backend/.env.example`).
